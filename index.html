@@ -27,21 +27,44 @@
         /* Header */
         .header {
             background-color: #ffffff;
-            padding: 15px 0;
+            padding: 20px 0;
             border-bottom: 1px solid #e5e7eb;
             text-align: center;
         }
+        .header .logo {
+            text-decoration: none;
+            display: inline-block;
+        }
         .header .logo img {
-            height: 50px;
+            height: 60px; /* Increased logo size */
             width: auto;
             vertical-align: middle;
+        }
+        .logo-text {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #4b5563;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
         }
 
         /* Hero Section */
         .hero {
             background-color: #f9fafb;
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            color: #4b5563;
         }
         .cta-button {
             display: inline-block;
@@ -53,6 +76,7 @@
             border-radius: 8px;
             text-decoration: none;
             transition: background-color 0.3s;
+            margin-bottom: 50px; /* Space between button and image */
         }
         .cta-button:hover {
             background-color: #1d4ed8;
@@ -60,7 +84,7 @@
 
         /* Sections Styling */
         .section {
-            padding: 80px 0;
+            padding: 80px 20px;
             text-align: center;
         }
         .section-title {
@@ -73,7 +97,7 @@
         .problem-section .section-title {
             color: #ffffff;
         }
-        .services-section, .why-us-section {
+        .services-section {
             background-color: #ffffff;
         }
         .why-us-section {
@@ -90,7 +114,7 @@
         /* Grid Layout for Services */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             text-align: left;
         }
@@ -117,21 +141,38 @@
         /* Footer */
         .footer {
             background-color: #111827;
-            color: #d1d5db;
+            color: #9ca3af;
             text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
+            padding: 40px 20px;
+        }
+        .footer-contact {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .footer-contact p {
+            margin: 5px 0;
+        }
+        .footer-contact a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: text-decoration 0.3s;
+        }
+        .footer-contact a:hover {
+            text-decoration: underline;
         }
         
-        /* Responsive Design */
+        /* Responsive Design for Mobile */
         @media (max-width: 768px) {
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 32px; }
+            .hero p { font-size: 16px; }
+            .section { padding: 60px 20px; }
             .section-title { font-size: 28px; }
-            .section { padding: 60px 0; }
         }
     </style>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -140,12 +181,16 @@
         <div class="container">
             <a href="#" class="logo">
                 <img src="logo.png" alt="Insurmatics CANADA Logo">
+                <span class="logo-text">Insurmatics</span>
             </a>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
+            <h1>Stop Drowning in Operations. Start Scaling Your Business.</h1>
+            <p>We help Canadian businesses optimize processes, automate workflows, and unlock predictable growth. We handle the operational chaos, so you can focus on being the CEO.</p>
+            <a href="https://calendar.app.google/W35Uwu1F9HzuLLvv9" class="cta-button" target="_blank">Book a Free Discovery Call</a>
             <img src="hero-banner.png" alt="Path to Effortless Efficiency" class="section-image" style="box-shadow: none; border-radius: 0;">
         </div>
     </section>
@@ -195,7 +240,16 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2025 Insurmatics CANADA. All rights reserved.</p>
+        <div class="container">
+            <div class="footer-contact">
+                <p><a href="mailto:info@insurmatics.com">info@insurmatics.com</a></p>
+                <p><a href="tel:+14373406010">+1 (437) 340-6010</a></p>
+                <p style="color: #9ca3af;">8 Nelson St W, Bhive, Brampton Innovation District, ON L6X 1B7</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 Insurmatics CANADA. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
